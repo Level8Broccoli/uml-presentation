@@ -274,38 +274,48 @@
         });
     </script>
     <script>
-        const colorReset = () => {
+        const removeClassFromBody = (className) => {
             const bodyHtml = document.querySelector('body');
-            bodyHtml.classList.remove('first');
-            bodyHtml.classList.remove('second');
-            bodyHtml.classList.remove('third');
+            bodyHtml.classList.remove(className);
+        };
+
+        const addClassToBody = (className) => {
+            const bodyHtml = document.querySelector('body');
+            bodyHtml.classList.add(className);
+        };
+
+        const writeToFooter = (footerText) => {
             const footerHtml = document.querySelector('#footer p');
-            footerHtml.innerText = '';
+            footerHtml.innerText = footerText;
+        };
+
+        const colorReset = () => {
+            removeClassFromBody('first');
+            removeClassFromBody('second');
+            removeClassFromBody('third');
+            writeToFooter('');
         };
 
         Reveal.addEventListener('colorReset', function () {
             colorReset();
         });
+
         Reveal.addEventListener('colorMeFirst', function () {
             colorReset();
-            document.querySelector('body').classList.add('first');
-            const footerHtml = document.querySelector('#footer p');
-            footerHtml.innerText = 'Anwendungsfalldiagramm';
-            footerHtml.style.opacity = '1';
+            addClassToBody('first');
+            writeToFooter('Anwendungsfalldiagramm');
         });
+
         Reveal.addEventListener('colorMeSecond', function () {
             colorReset();
-            document.querySelector('body').classList.add('second');
-            const footerHtml = document.querySelector('#footer p');
-            footerHtml.innerText = 'Klassendiagramm';
-            footerHtml.style.opacity = '1';
+            addClassToBody('second');
+            writeToFooter('Klassendiagramm');
         });
+
         Reveal.addEventListener('colorMeThird', function () {
             colorReset();
-            document.querySelector('body').classList.add('third');
-            const footerHtml = document.querySelector('#footer p');
-            footerHtml.innerText = 'Sequenzdiagramm';
-            footerHtml.style.opacity = '1';
+            addClassToBody('third');
+            writeToFooter('Sequenzdiagramm');
         });
     </script>
 </body>
