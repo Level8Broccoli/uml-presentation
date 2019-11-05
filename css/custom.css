@@ -69,26 +69,27 @@ ol>li>ul>li {
 }
 
 .first .reveal .progress,
-.first .reveal h1,
-.first .reveal h2,
-.first .reveal h3,
+.reveal [data-state="colorMeFirst"] h1,
+.reveal [data-state="colorMeFirst"] h2,
+.reveal [data-state="colorMeFirst"] h3,
 .reveal #colorFirst {
     color: var(--color-1);
 }
 
 
 .second .reveal .progress,
-.second .reveal h1,
-.second .reveal h2,
-.second .reveal h3,
+.reveal [data-state="colorMeSecond"] h1,
+.reveal [data-state="colorMeSecond"] h2,
+.reveal [data-state="colorMeSecond"] h3,
 .reveal #colorSecond {
     color: var(--color-2);
 }
 
+
 .third .reveal .progress,
-.third .reveal h1,
-.third .reveal h2,
-.third .reveal h3,
+.reveal [data-state="colorMeThird"] h1,
+.reveal [data-state="colorMeThird"] h2,
+.reveal [data-state="colorMeThird"] h3,
 .reveal #colorThird {
     color: var(--color-3);
 }
