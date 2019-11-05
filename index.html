@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>UML Diagramme</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/serif.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <small><em>Danjo Henz, Oliver Bucher, Thierry Girod</em></small>
+                <br />
+                <h1>UML</h1>
+                <h2 class="fragment fade-up">Anwendungsfalldiagramm</h2>
+                <h2 class="fragment fade-up">Klassendiagramm</h2>
+                <h2 class="fragment fade-up">Sequenzdiagramm</h2>
+            </section>
+            <section>
+                <h2>Sprintplanning</h2>
+                <ul>
+                    <li class="fragment fade-up"><strong>Sprint 1</strong>
+                        <ul>
+                            <li>Anwendungsfalldiagramm</li>
+                        </ul>
+                    </li>
+                    <li class="fragment fade-up"><strong>Backlog</strong>
+                        <ul>
+                            <li>Klassendiagramm</li>
+                            <li>Sequenzdiagramm</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2>Anwendungsfalldiagramm</h2>
+                <ul>
+                    <li class="fragment fade-up"><strong>Was wird beschrieben?</strong>
+                        <ul>
+                            <li>
+                                System
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="fragment fade-up"><strong>Wer interagiert mit dem System?</strong>
+                        <ul>
+                            <li>Akteure</li>
+                        </ul>
+                    </li>
+                    <li class="fragment fade-up"><strong>Was machen diese Akteure?</strong>
+                        <ul>
+                            <li>Anwendungsfall</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2>Anwendungsfall und Akteure</h2>
+                <img src="images/01_anwendungsfalldiagramm/1.png" alt="">
+            </section>
+            <section>
+                <h2>Beziehungen<br /><small>(Generalisierung und Vererbung)</small></h2>
+                <img src="images/01_anwendungsfalldiagramm/2.png" alt="">
+            </section>
+            <section>
+                <h3>Anwendungsfalldiagramm erstellen</h3>
+                <ol style="font-size: 0.8em;">
+                    <li>Identifikation von Akteuren und Anwendungsfällen <br />(Wer- und Was-Fragen)</li>
+                    <li>Beziehungen und Zusammenhänge finden</li>
+                    <li>Beschreibung der Anwendungsfälle
+                        <ul>
+                            <li>Name, Kurzbeschreibung</li>
+                            <li>Vorbedingungen, Nachbedingungen</li>
+                            <li>Fehlersituationen, Systemzustand im Fehlerfall</li>
+                            <li>Akteur</li>
+                            <li>Trigger</li>
+                            <li>Standardablauf</li>
+                            <li>Alternativablauf</li>
+                        </ul>
+                    </li>
+                    <li>Stolpersteine vermeiden</li>
+                </ol>
+            </section>
+            <section>
+                <h2>Stolpersteine</h2>
+                <ul style="font-size: 0.8em;">
+                    <li>Modellierung von Abläufen</li>
+                    <li>Falsches Setzen der Systegrenze (Akteure immer ausserhalb)</li>
+                    <li>Vermischen von Abstraktionsleveln</li>
+                    <li>Funktionale Dekomposition (Anendungsfälle sind immer eigenständig ausführbar, ansonsten keine
+                        Anwendungsfälle)</li>
+                    <li>Fehlerhafte Assoziationen </li>
+                    <li>Modellierung von redundanten Anwendungsfällen <br /> (Fälle mit gleichem Ziel zusammenfassen, Bsp. LV
+                        verwalten, <br />statt LV erstellen, löschen, aktulisieren) </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <script src="js/reveal.js"></script>
+
+    <script>
+        // More info about config & dependencies:
+        // - https://github.com/hakimel/reveal.js#configuration
+        // - https://github.com/hakimel/reveal.js#dependencies
+        Reveal.initialize({
+            controls: false,
+            progress: true,
+            center: true,
+            hash: true,
+            transition: 'concave',
+            dependencies: [{
+                    src: 'plugin/markdown/marked.js'
+                },
+                {
+                    src: 'plugin/markdown/markdown.js'
+                },
+                {
+                    src: 'plugin/notes/notes.js',
+                    async: true
+                },
+                {
+                    src: 'plugin/highlight/highlight.js',
+                    async: true
+                }
+            ]
+        });
+    </script>
+</body>
+
+</html>

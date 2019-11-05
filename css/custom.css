@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Asap:400,400i,700,700i|Abril+Fatface|Volkhov:400i&display=swap');
+
+:root {
+    --primary-font: 'Asap', sans-serif;
+    --secondary-font: 'Abril Fatface', cursive;
+    --cursive-font: 'Volkhov', serif;
+
+    --text-color: #444444;
+    --gray-color: #aaaaaa;
+
+    --bg-color: #F0F1EB;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+.reveal {
+    font-family: var(--primary-font);
+    color: var(--text-color);
+}
+
+.reveal em {
+    font-family: var(--cursive-font);
+    text-emphasis: italic;
+    color: var(--gray-color);
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+    font-family: var(--secondary-font);
+}
+
+.reveal h1 {
+    font-family: var(--secondary-font);
+    font-size: 2.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.reveal h2 {
+    font-size: 1.5em;
+}
+
+.reveal h3 {
+    font-size: 1.2em;
+}
+
+ul>li,
+ol>li {
+    margin-top: 0.5em;
+}
+
+ul>li>ul>li,
+ol>li>ul>li {
+    margin-top: 0;
+}
