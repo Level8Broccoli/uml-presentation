@@ -28,7 +28,7 @@
 <body>
     <div class="reveal">
         <div class="slides">
-            <section>
+            <section data-state="colorReset">
                 <small><em>Danjo Henz, Oliver Bucher, Thierry Girod</em></small>
                 <br />
                 <h1>UML</h1>
@@ -36,7 +36,7 @@
                 <h2 class="fragment fade-up">Klassendiagramm</h2>
                 <h2 class="fragment fade-up">Sequenzdiagramm</h2>
             </section>
-            <section>
+            <section data-state="colorReset">
                 <h2>Sprintplanning</h2>
                 <ul>
                     <li class="fragment fade-up"><strong>Sprint 1</strong>
@@ -52,7 +52,7 @@
                     </li>
                 </ul>
             </section>
-            <section>
+            <section data-state="colorMeFirst">
                 <h2>Anwendungsfalldiagramm</h2>
                 <ul>
                     <li class="fragment fade-up"><strong>Was wird beschrieben?</strong>
@@ -74,15 +74,15 @@
                     </li>
                 </ul>
             </section>
-            <section>
+            <section data-state="colorMeFirst">
                 <h2>Anwendungsfall und Akteure</h2>
                 <img src="images/01_anwendungsfalldiagramm/1.png" alt="">
             </section>
-            <section>
+            <section data-state="colorMeFirst">
                 <h2>Beziehungen<br /><small>(Generalisierung und Vererbung)</small></h2>
                 <img src="images/01_anwendungsfalldiagramm/2.png" alt="">
             </section>
-            <section>
+            <section data-state="colorMeFirst">
                 <h3>Anwendungsfalldiagramm erstellen</h3>
                 <ol style="font-size: 0.8em;">
                     <li>Identifikation von Akteuren und Anwendungsfällen <br />(Wer- und Was-Fragen)</li>
@@ -101,7 +101,7 @@
                     <li>Stolpersteine vermeiden</li>
                 </ol>
             </section>
-            <section>
+            <section data-state="colorMeFirst">
                 <h2>Stolpersteine</h2>
                 <ul style="font-size: 0.8em;">
                     <li>Modellierung von Abläufen</li>
@@ -110,8 +110,39 @@
                     <li>Funktionale Dekomposition (Anendungsfälle sind immer eigenständig ausführbar, ansonsten keine
                         Anwendungsfälle)</li>
                     <li>Fehlerhafte Assoziationen </li>
-                    <li>Modellierung von redundanten Anwendungsfällen <br /> (Fälle mit gleichem Ziel zusammenfassen, Bsp. LV
+                    <li>Modellierung von redundanten Anwendungsfällen <br /> (Fälle mit gleichem Ziel zusammenfassen,
+                        Bsp. LV
                         verwalten, <br />statt LV erstellen, löschen, aktulisieren) </li>
+                </ul>
+            </section>
+            <section data-state="colorReset">
+                <h2>Sprintplanning</h2>
+                <ul>
+                    <li class="fragment fade-up"><strong>Sprint 2</strong>
+                        <ul>
+                            <li>Anwendungsfalldiagramm</li>
+                            <li>Klassendiagramm</li>
+                        </ul>
+                    </li>
+                    <li class="fragment fade-up"><strong>Backlog</strong>
+                        <ul>
+                            <li>Sequenzdiagramm</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <section data-state="colorReset">
+                <h2>Sprintplanning</h2>
+                <ul>
+                    <li class="fragment fade-up"><strong>Sprint 3</strong>
+                        <ul>
+                            <li>Anwendungsfalldiagramm</li>
+                            <li>Klassendiagramm</li>
+                            <li>Sequenzdiagramm</li>
+                        </ul>
+                    </li>
+                    <li class="fragment fade-up"><strong>Backlog</strong>
+                    </li>
                 </ul>
             </section>
         </div>
@@ -128,6 +159,7 @@
             progress: true,
             center: true,
             hash: true,
+            fragmentInURL: true,
             transition: 'concave',
             dependencies: [{
                     src: 'plugin/markdown/marked.js'
@@ -144,6 +176,29 @@
                     async: true
                 }
             ]
+        });
+    </script>
+    <script>
+        const colorReset = () => {
+            const bodyHtml = document.querySelector('body');
+            bodyHtml.classList.remove('first');
+            bodyHtml.classList.remove('second');
+            bodyHtml.classList.remove('third');
+        };
+        Reveal.addEventListener('colorReset', function () {
+            colorReset();
+        });
+        Reveal.addEventListener('colorMeFirst', function () {
+            colorReset();
+            document.querySelector('body').classList.add('first');
+        });
+        Reveal.addEventListener('colorMeSecond', function () {
+            colorReset();
+            document.querySelector('body').classList.add('second');
+        });
+        Reveal.addEventListener('colorMeThird', function () {
+            colorReset();
+            document.querySelector('body').classList.add('third');
         });
     </script>
 </body>

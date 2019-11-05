@@ -9,6 +9,10 @@
     --gray-color: #aaaaaa;
 
     --bg-color: #F0F1EB;
+
+    --color-1: #00AFBA;
+    --color-1: #0DBF64;
+    --color-1: #C44741;
 }
 
 body {
@@ -58,4 +62,30 @@ ol>li {
 ul>li>ul>li,
 ol>li>ul>li {
     margin-top: 0;
+}
+
+.reveal .progress {
+    height: 30px;
+}
+
+.first .reveal .progress,
+.first .reveal h1,
+.first .reveal h2,
+.first .reveal h3 {
+    color: var(--color-1);
+}
+
+
+.second .reveal .progress,
+.second .reveal h1,
+.second .reveal h2,
+.second .reveal h3 {
+    color: var(--color-2);
+}
+
+.third .reveal .progress,
+.third .reveal h1,
+.third .reveal h2,
+.third .reveal h3 {
+    color: var(--color-3);
 }
