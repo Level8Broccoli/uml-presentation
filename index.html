@@ -131,6 +131,92 @@
                     </li>
                 </ul>
             </section>
+            <section data-state="colorMeSecond">
+                <h2>Wofür und Warum?</h2>
+                <ul>
+                    <li>Objektorientierte Programmierung</li>
+                    <li>Einfach und populär</li>
+                    <li>Konzeptionelle Sicht in frühen Projektphasen</li>
+                    <li>Codegenerierung</li>
+                </ul>
+            </section>
+            <section data-state="colorMeSecond">
+                <h2>Vom Objektdiagramm <br />zum Klassendiagramm</h2>
+                <p>Statische Struktur &lt;&ndash;&gt; Zustand zur Laufzeit</p>
+                <img src="images/02_klassendiagramm/1.png" alt="">
+            </section>
+            <section data-state="colorMeSecond">
+                <h2>Notation</h2>
+                <ul>
+                    <li>Grundlagen
+                    </li>
+                    <li>Attribut <br />
+                        <small> [Sichtbarkeit] [/] name [: Typ] [ Multiplizität ] [= Vorgabewert]
+                            [{eigenschaftswert*}]</small>
+                    </li>
+                    <li>Operation
+                        <small>
+                            [Sichtbarkeit] name [({Parameter})] [: Rückgabetyp] [{eigenschaftswert*}]
+                        </small>
+                    </li>
+                    <li>Sichtbarkeit</li>
+                    <li>Datentyp</li>
+                    <li>Multiplizität</li>
+                </ul>
+                <img src="images/02_klassendiagramm/2.png" alt=""
+                    style="position: absolute; right: 0; bottom: 0; height: 5em;">
+            </section>
+            <section data-state="colorMeSecond">
+                <h2>Assoziation</h2>
+                <p>
+                    Modellierung möglicher Beziehungen <br />zwischen Instanzen
+                </p>
+                <img src="images/02_klassendiagramm/3.png" alt="">
+            </section>
+            <section data-state="colorMeSecond">
+                <h2>Aggregation und Komposition</h2>
+                <img src="images/02_klassendiagramm/4.png" alt="">
+            </section>
+            <section data-state="colorMeSecond">
+                <h2>Stolpersteine</h2>
+                <ul>
+                    <li>Zweck erkennen/ festlegen</li>
+                    <li>
+                        Fehlende Methoden, Parameter, Assoziationen
+                    </li>
+                    <li>
+                        Fehlende Navigierbarkeit und Beschriftungen bei den Assoziationen
+                    </li>
+                    <li>
+                        Fehlender oder falscher Typ der Methode
+                    </li>
+                    <li>
+                        Angabe von Implementationsdetails
+                    </li>
+                    <li>
+                        Methoden in falschen Klassen aufgelistet
+                    </li>
+                </ul>
+            </section>
+            <section data-state="colorMeSecond">
+                <h2>Was noch?</h2>
+                <ul>
+                    <li>Generalisierung und Vererbung
+                    </li>
+                    <li>
+                        Abstrakte Klassen
+                    </li>
+                    <li>
+                        Interfaces
+                    </li>
+                    <li>
+                        Assoziationsklassen
+                    </li>
+                    <li>
+                        Codegenerierung
+                    </li>
+                </ul>
+            </section>
             <section data-state="colorReset">
                 <h2>Sprintplanning</h2>
                 <ul>
@@ -145,7 +231,16 @@
                     </li>
                 </ul>
             </section>
+            <section data-state="colorMeThird">
+                <h2>Sequenzdiagramm einsetzen</h2>
+
+            </section>
         </div>
+        <footer id="footer">
+            <p>
+
+            </p>
+        </footer>
     </div>
 
     <script src="js/reveal.js"></script>
@@ -184,21 +279,33 @@
             bodyHtml.classList.remove('first');
             bodyHtml.classList.remove('second');
             bodyHtml.classList.remove('third');
+            const footerHtml = document.querySelector('#footer p');
+            footerHtml.innerText = '';
         };
+
         Reveal.addEventListener('colorReset', function () {
             colorReset();
         });
         Reveal.addEventListener('colorMeFirst', function () {
             colorReset();
             document.querySelector('body').classList.add('first');
+            const footerHtml = document.querySelector('#footer p');
+            footerHtml.innerText = 'Anwendungsfalldiagramm';
+            footerHtml.style.opacity = '1';
         });
         Reveal.addEventListener('colorMeSecond', function () {
             colorReset();
             document.querySelector('body').classList.add('second');
+            const footerHtml = document.querySelector('#footer p');
+            footerHtml.innerText = 'Klassendiagramm';
+            footerHtml.style.opacity = '1';
         });
         Reveal.addEventListener('colorMeThird', function () {
             colorReset();
             document.querySelector('body').classList.add('third');
+            const footerHtml = document.querySelector('#footer p');
+            footerHtml.innerText = 'Sequenzdiagramm';
+            footerHtml.style.opacity = '1';
         });
     </script>
 </body>

@@ -11,8 +11,8 @@
     --bg-color: #F0F1EB;
 
     --color-1: #00AFBA;
-    --color-1: #0DBF64;
-    --color-1: #C44741;
+    --color-2: #0DBF64;
+    --color-3: #C44741;
 }
 
 body {
@@ -88,4 +88,20 @@ ol>li>ul>li {
 .third .reveal h2,
 .third .reveal h3 {
     color: var(--color-3);
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    left: 0.5em;
+    z-index: 666;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+}
+
+#footer p {
+    opacity: 0;
+    margin: 0;
 }
